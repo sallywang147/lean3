@@ -214,6 +214,7 @@ abstract_context_cache.o: abstract_context_cache.cpp.o
 
 # target to build an object file
 abstract_context_cache.cpp.o:
+	cd /home/sally/lean3/build/release && $(WASM_CLANG++_COMMAND) -Os $(MAKESILENT) -f library/CMakeFiles/library.dir/build.make library/CMakeFiles/library.dir/abstract_context_cache.wasm
 	cd /home/sally/lean3/build/release && $(MAKE) $(MAKESILENT) -f library/CMakeFiles/library.dir/build.make library/CMakeFiles/library.dir/abstract_context_cache.cpp.o
 .PHONY : abstract_context_cache.cpp.o
 
