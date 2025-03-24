@@ -50,6 +50,10 @@ SHELL = /bin/sh
 # The CMake executable.
 CMAKE_COMMAND = /usr/bin/cmake
 
+WASM_CLANG_COMMAND = /usr/local/share/wasm-toolchain/sysroot/bin/clang
+
+WASM_CLANG++_COMMAND = /usr/local/share/wasm-toolchain/sysroot/bin/clang++
+
 # The command to remove a file.
 RM = /usr/bin/cmake -E rm -f
 
@@ -212,6 +216,10 @@ abstract_context_cache.o: abstract_context_cache.cpp.o
 abstract_context_cache.cpp.o:
 	cd /home/sally/lean3/build/release && $(MAKE) $(MAKESILENT) -f library/CMakeFiles/library.dir/build.make library/CMakeFiles/library.dir/abstract_context_cache.cpp.o
 .PHONY : abstract_context_cache.cpp.o
+
+abstract_context_cache.cpp.wasm:
+	cd /home/sally/lean3/build/release && $(WASM_CLANG++_COMMAND) -Os $(MAKESILENT) -f library/CMakeFiles/library.dir/build.make library/CMakeFiles/library.dir/abstract_context_cache.wasm
+.PHONY : abstract_context_cache.cpp.wasm
 
 abstract_context_cache.i: abstract_context_cache.cpp.i
 .PHONY : abstract_context_cache.i
