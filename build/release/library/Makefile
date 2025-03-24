@@ -883,6 +883,7 @@ fingerprint.o: fingerprint.cpp.o
 # target to build an object file
 fingerprint.cpp.o:
 	cd /home/sally/lean3/build/release && $(MAKE) $(MAKESILENT) -f library/CMakeFiles/library.dir/build.make library/CMakeFiles/library.dir/fingerprint.cpp.o
+	cd /home/sally/lean3/build/release && $(MAKE) $(MAKESILENT) -f library/CMakeFiles/library.dir/build.make library/CMakeFiles/library.dir/fingerprint.cpp.wasm
 .PHONY : fingerprint.cpp.o
 
 fingerprint.i: fingerprint.cpp.i
